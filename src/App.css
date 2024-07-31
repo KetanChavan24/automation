@@ -1,137 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: none;
-  outline: none;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  margin-top: 20px;
-  font-family: 'Poppins', sans-serif;
-  background-image: url('/assets/backkkkk.jpeg'); /* Use relative path */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-}
-
-#fname, #lname {
-  width: 100%;
-  border-width: 4px;
-  margin-bottom: 10px;
-}
-
-.container {
+.App {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  gap: 13px;
-  width: 90%;
-  max-width: 500px;
-  margin: 0 auto;
-  height: auto;
+  background-color: #f0f0f0;
+}
+
+.sidebar {
+  width: 200px;
   padding: 20px;
-  color: aliceblue;
-  background-color: #1f242d;
-  border-radius: 5%;
-  opacity: 0.9;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-right: 20px;
 }
 
-#addInputButton {
-  background-color: #0d6efd;
+.sidebar h2 {
+  margin-top: 0;
 }
 
-.first, .second, .third, .fourth, .fifth {
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
   display: flex;
-  flex-direction: row;
-  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar li svg {
+  margin-right: 10px;
+}
+
+.canvas-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
-.first {
-  margin-top: 10px;
-}
-
-.chota {
-  margin-top: 8px;
-}
-
-#chotadrop {
-  margin-top: 15px;
-}
-
-#chotagender {
-  margin-bottom: 36px;
-}
-
-.btn-danger {
-  box-shadow: 0 0 1rem red;
-}
-
-.btn-primary {
-  box-shadow: 0 0 1rem blue;
-}
-
-.json-output {
-  background-color: #2c3039;
-  color: #ffffff;
-  padding: 15px;
-  border-radius: 5px;
-  margin-top: 20px;
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-}
-
-.json-output h4 {
-  margin-bottom: 10px;
-}
-
-.json-output pre {
-  background-color: #1f242d;
-  color: #00ff00;
-  padding: 10px;
-  border-radius: 5px;
-  overflow-x: auto;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
-  
-  .first, .second, .third, .fourth, .fifth {
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .chota {
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 10px;
-    width: 100%;
-  }
-  
-  .first, .second, .third, .fourth, .fifth {
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .first, .second {
-    width: 100%;
-  }
-  
-  .btn-danger, .btn-primary {
-    width: 100%;
-    margin-top: 10px;
-  }
+.canvas {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
